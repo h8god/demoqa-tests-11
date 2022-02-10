@@ -36,7 +36,7 @@ public class RegistrationFormTests {
         $("#subjectsInput").setValue("Commerce").pressEnter();
         $(byText("Sports")).click();
         $(byText("Music")).click();
-        $("#uploadPicture").uploadFile(new File("src/test/files/nastroenie0007.jpg"));
+        $("#uploadPicture").uploadFromClasspath("nastroenie0007.jpg");
         $("#currentAddress").setValue("Moscow");
         $("#state").scrollTo().click();
         $(byText("Haryana")).click();
@@ -46,20 +46,17 @@ public class RegistrationFormTests {
 
         // проверки заполнения полей
 
-        $(".table-responsive").shouldHave(text("Igor Zvyagintsev"));
-        $(".table-responsive").shouldHave(text("zvyagintsevis@yandex.ru"));
-        $(".table-responsive").shouldHave(text("Male"));
-        $(".table-responsive").shouldHave(text("1234567890"));
-        $(".table-responsive").shouldHave(text("13 May,1993"));
-        $(".table-responsive").shouldHave(text("Commerce"));
-        $(".table-responsive").shouldHave(text("Sports"));
-        $(".table-responsive").shouldHave(text("Music"));
-        $(".table-responsive").shouldHave(text("nastroenie0007.jpg"));
-        $(".table-responsive").shouldHave(text("Moscow"));
-        $(".table-responsive").shouldHave(text("Haryana Panipat"));
-
+        $(".table-responsive").shouldHave(
+                text("Igor Zvyagintsev"),
+                text("zvyagintsevis@yandex.ru"),
+                text("Male"),
+                text("1234567890"),
+                text("13 May,1993"),
+                text("Commerce"),
+                text("Sports"),
+                text("Music"),
+                text("nastroenie0007.jpg"),
+                text("Moscow"),
+                text("Haryana Panipat"));
     }
-
-
-
 }
