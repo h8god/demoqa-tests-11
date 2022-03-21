@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationFormTests {
-
+//комментарий для первого коммита
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
