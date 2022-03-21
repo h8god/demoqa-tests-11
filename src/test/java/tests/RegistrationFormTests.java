@@ -59,4 +59,5 @@ public class RegistrationFormTests {
                 text("Moscow"),
                 text("Haryana Panipat"));
     }
+    //комментарий для второго коммита
 }
