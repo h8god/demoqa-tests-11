@@ -13,13 +13,13 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationFormTests {
-
+//комментарий для первого коммита
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
     }
-
+//комментарий для третьего коммита
     @Test
     void successFillTest() {
         open("/automation-practice-form");
@@ -59,4 +59,5 @@ public class RegistrationFormTests {
                 text("Moscow"),
                 text("Haryana Panipat"));
     }
+    //комментарий для второго коммита
 }
